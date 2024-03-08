@@ -1,7 +1,9 @@
 ---
 title: Quality Engineering
-description: Quality engineering in the pipeline
-images: ["https://via.placeholder.com/250x200/d9d9d9/000000"]
+---
+title: "Home"
+menu: "main"
+weight: 1
 ---
 
 > Bringing quality to all aspects of a project.
