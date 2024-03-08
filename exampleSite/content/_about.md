@@ -1,6 +1,7 @@
 ---
-title: About
-description: Quality Assurance / Test Engineering / Test Architect / Test Coaching / Accessibility
+title: "About us"
+menu: "main"
+weight: 1
 ---
 
 ## The services
