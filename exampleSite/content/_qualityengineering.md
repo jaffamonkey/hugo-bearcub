@@ -1,7 +1,5 @@
 ---
-title: Quality Engineering
----
-title: "Home"
+title: "Quality Engineering"
 menu: "main"
 weight: 1
 ---
