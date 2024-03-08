@@ -1,0 +1,546 @@
+archetypedir = 'archetypes'
+assetdir = 'assets'
+baseurl = 'https://resplendent-pothos-b15074.netlify.app'
+cachedir = '/Users/user/Library/Caches/hugo_cache'
+contentdir = 'content'
+copyright = 'John Doe (CC BY 4.0)'
+datadir = 'data'
+defaultcontentlanguage = 'en'
+enablerobotstxt = true
+environment = 'production'
+i18ndir = 'i18n'
+languagecode = 'en-US'
+layoutdir = 'layouts'
+paginate = 10
+paginatepath = 'page'
+pluralizelisttitles = true
+publishdir = 'public'
+resourcedir = 'resources'
+staticdir = ['static']
+summarylength = 70
+theme = ['hugo-bearcub']
+themesdir = 'themes'
+timeout = '30s'
+title = 'Bear Cub'
+titlecasestyle = 'AP'
+workingdir = '/Users/user/code/hugo-bearcub/exampleSite'
+
+[build]
+  useresourcecachewhen = 'fallback'
+
+  [build.buildstats]
+
+[[build.cachebusters]]
+    source = 'assets/.*\.(js|ts|jsx|tsx)'
+    target = '(js|scripts|javascript)'
+
+[[build.cachebusters]]
+    source = 'assets/.*\.(css|sass|scss)$'
+    target = '(css|styles|scss|sass)'
+
+[[build.cachebusters]]
+    source = '(postcss|tailwind)\.config\.js'
+    target = '(css|styles|scss|sass)'
+
+[[build.cachebusters]]
+    source = 'assets/.*\.(.*)$'
+    target = '$1'
+
+[caches]
+  [caches.assets]
+    dir = ':resourceDir/_gen'
+    maxage = -1
+
+  [caches.getcsv]
+    dir = ':cacheDir/:project'
+    maxage = -1
+
+  [caches.getjson]
+    dir = ':cacheDir/:project'
+    maxage = -1
+
+  [caches.getresource]
+    dir = ':cacheDir/:project'
+    maxage = -1
+
+  [caches.images]
+    dir = ':resourceDir/_gen'
+    maxage = -1
+
+  [caches.modules]
+    dir = ':cacheDir/modules'
+    maxage = -1
+
+[deployment]
+  invalidatecdn = true
+  maxdeletes = 256
+  workers = 10
+
+[frontmatter]
+  date = ['date', 'publishdate', 'pubdate', 'published', 'lastmod', 'modified']
+  expirydate = ['expirydate', 'unpublishdate']
+  lastmod = [':git', 'lastmod', 'modified', 'date', 'publishdate', 'pubdate', 'published']
+  publishdate = ['publishdate', 'pubdate', 'published', 'date']
+
+[imaging]
+  bgcolor = '#ffffff'
+  hint = 'photo'
+  quality = 75
+  resamplefilter = 'box'
+
+[languages]
+  [languages.en]
+    languagecode = 'en-US'
+    languagename = 'en-US 🇺🇸'
+    title = 'Bear Cub'
+
+  [languages.pt]
+    languagecode = 'pt-BR'
+    languagename = 'pt-BR 🇧🇷'
+    title = 'Bear Cub'
+
+[markup]
+  defaultmarkdownhandler = 'goldmark'
+
+  [markup.asciidocext]
+    backend = 'html5'
+    failurelevel = 'fatal'
+    noheaderorfooter = true
+    safemode = 'unsafe'
+
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionlist = true
+      footnote = true
+      linkify = true
+      linkifyprotocol = 'https'
+      strikethrough = true
+      table = true
+      tasklist = true
+
+      [markup.goldmark.extensions.cjk]
+        eastasianlinebreaksstyle = 'simple'
+
+      [markup.goldmark.extensions.typographer]
+        apostrophe = '&rsquo;'
+        ellipsis = '&hellip;'
+        emdash = '&mdash;'
+        endash = '&ndash;'
+        leftanglequote = '&laquo;'
+        leftdoublequote = '&ldquo;'
+        leftsinglequote = '&lsquo;'
+        rightanglequote = '&raquo;'
+        rightdoublequote = '&rdquo;'
+        rightsinglequote = '&rsquo;'
+
+    [markup.goldmark.parser]
+      autoheadingid = true
+      autoheadingidtype = 'github'
+      wrapstandaloneimagewithinparagraph = true
+
+      [markup.goldmark.parser.attribute]
+        title = true
+
+    [markup.goldmark.renderer]
+
+  [markup.highlight]
+    codefences = true
+    linenos = true
+    linenostart = 1
+    style = 'monokai'
+    tabwidth = 4
+
+  [markup.tableofcontents]
+    endlevel = 3
+    startlevel = 2
+
+[mediatypes]
+  [mediatypes.'application/json']
+    delimiter = '.'
+    suffixes = ['json']
+
+  [mediatypes.'application/manifest+json']
+    delimiter = '.'
+    suffixes = ['webmanifest']
+
+  [mediatypes.'application/octet-stream']
+    delimiter = '.'
+
+  [mediatypes.'application/pdf']
+    delimiter = '.'
+    suffixes = ['pdf']
+
+  [mediatypes.'application/rss+xml']
+    delimiter = '.'
+    suffixes = ['xml', 'rss']
+
+  [mediatypes.'application/toml']
+    delimiter = '.'
+    suffixes = ['toml']
+
+  [mediatypes.'application/wasm']
+    delimiter = '.'
+    suffixes = ['wasm']
+
+  [mediatypes.'application/xml']
+    delimiter = '.'
+    suffixes = ['xml']
+
+  [mediatypes.'application/yaml']
+    delimiter = '.'
+    suffixes = ['yaml', 'yml']
+
+  [mediatypes.'font/otf']
+    delimiter = '.'
+    suffixes = ['otf']
+
+  [mediatypes.'font/ttf']
+    delimiter = '.'
+    suffixes = ['ttf']
+
+  [mediatypes.'image/bmp']
+    delimiter = '.'
+    suffixes = ['bmp']
+
+  [mediatypes.'image/gif']
+    delimiter = '.'
+    suffixes = ['gif']
+
+  [mediatypes.'image/jpeg']
+    delimiter = '.'
+    suffixes = ['jpg', 'jpeg', 'jpe', 'jif', 'jfif']
+
+  [mediatypes.'image/png']
+    delimiter = '.'
+    suffixes = ['png']
+
+  [mediatypes.'image/svg+xml']
+    delimiter = '.'
+    suffixes = ['svg']
+
+  [mediatypes.'image/tiff']
+    delimiter = '.'
+    suffixes = ['tif', 'tiff']
+
+  [mediatypes.'image/webp']
+    delimiter = '.'
+    suffixes = ['webp']
+
+  [mediatypes.'text/calendar']
+    delimiter = '.'
+    suffixes = ['ics']
+
+  [mediatypes.'text/css']
+    delimiter = '.'
+    suffixes = ['css']
+
+  [mediatypes.'text/csv']
+    delimiter = '.'
+    suffixes = ['csv']
+
+  [mediatypes.'text/html']
+    delimiter = '.'
+    suffixes = ['html']
+
+  [mediatypes.'text/javascript']
+    delimiter = '.'
+    suffixes = ['js', 'jsm', 'mjs']
+
+  [mediatypes.'text/jsx']
+    delimiter = '.'
+    suffixes = ['jsx']
+
+  [mediatypes.'text/markdown']
+    delimiter = '.'
+    suffixes = ['md', 'markdown']
+
+  [mediatypes.'text/plain']
+    delimiter = '.'
+    suffixes = ['txt']
+
+  [mediatypes.'text/tsx']
+    delimiter = '.'
+    suffixes = ['tsx']
+
+  [mediatypes.'text/typescript']
+    delimiter = '.'
+    suffixes = ['ts']
+
+  [mediatypes.'text/x-sass']
+    delimiter = '.'
+    suffixes = ['sass']
+
+  [mediatypes.'text/x-scss']
+    delimiter = '.'
+    suffixes = ['scss']
+
+  [mediatypes.'video/3gpp']
+    delimiter = '.'
+    suffixes = ['3gpp', '3gp']
+
+  [mediatypes.'video/mp4']
+    delimiter = '.'
+    suffixes = ['mp4']
+
+  [mediatypes.'video/mpeg']
+    delimiter = '.'
+    suffixes = ['mpg', 'mpeg']
+
+  [mediatypes.'video/ogg']
+    delimiter = '.'
+    suffixes = ['ogv']
+
+  [mediatypes.'video/webm']
+    delimiter = '.'
+    suffixes = ['webm']
+
+  [mediatypes.'video/x-msvideo']
+    delimiter = '.'
+    suffixes = ['avi']
+
+[minify]
+  [minify.tdewolff]
+    [minify.tdewolff.css]
+      keepcss2 = true
+
+    [minify.tdewolff.html]
+      keepconditionalcomments = true
+      keepdefaultattrvals = true
+      keepdocumenttags = true
+      keependtags = true
+      templatedelims = ['', '']
+
+    [minify.tdewolff.js]
+      version = 2022
+
+    [minify.tdewolff.json]
+
+    [minify.tdewolff.svg]
+
+    [minify.tdewolff.xml]
+
+[module]
+  noproxy = 'none'
+  private = '*.*'
+  proxy = 'direct'
+  workspace = 'off'
+
+  [module.hugoversion]
+
+[[module.imports]]
+    path = 'hugo-bearcub'
+
+[[module.mounts]]
+    source = 'content'
+    target = 'content'
+
+[[module.mounts]]
+    lang = 'pt'
+    source = 'content.pt'
+    target = 'content'
+
+[[module.mounts]]
+    source = 'data'
+    target = 'data'
+
+[[module.mounts]]
+    source = 'layouts'
+    target = 'layouts'
+
+[[module.mounts]]
+    source = 'i18n'
+    target = 'i18n'
+
+[[module.mounts]]
+    source = 'archetypes'
+    target = 'archetypes'
+
+[[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+
+[[module.mounts]]
+    source = 'static'
+    target = 'static'
+
+[outputformats]
+  [outputformats.amp]
+    basename = 'index'
+    ishtml = true
+    mediatype = 'text/html'
+    name = 'amp'
+    path = 'amp'
+    permalinkable = true
+    rel = 'amphtml'
+
+  [outputformats.calendar]
+    basename = 'index'
+    isplaintext = true
+    mediatype = 'text/calendar'
+    name = 'calendar'
+    protocol = 'webcal://'
+    rel = 'alternate'
+
+  [outputformats.css]
+    basename = 'styles'
+    isplaintext = true
+    mediatype = 'text/css'
+    name = 'css'
+    notalternative = true
+    rel = 'stylesheet'
+
+  [outputformats.csv]
+    basename = 'index'
+    isplaintext = true
+    mediatype = 'text/csv'
+    name = 'csv'
+    rel = 'alternate'
+
+  [outputformats.html]
+    basename = 'index'
+    ishtml = true
+    mediatype = 'text/html'
+    name = 'html'
+    permalinkable = true
+    rel = 'canonical'
+    weight = 10
+
+  [outputformats.json]
+    basename = 'index'
+    isplaintext = true
+    mediatype = 'application/json'
+    name = 'json'
+    rel = 'alternate'
+
+  [outputformats.markdown]
+    basename = 'index'
+    isplaintext = true
+    mediatype = 'text/markdown'
+    name = 'markdown'
+    rel = 'alternate'
+
+  [outputformats.robots]
+    basename = 'robots'
+    isplaintext = true
+    mediatype = 'text/plain'
+    name = 'robots'
+    rel = 'alternate'
+
+  [outputformats.rss]
+    basename = 'index'
+    mediatype = 'application/rss+xml'
+    name = 'rss'
+    nougly = true
+    rel = 'alternate'
+
+  [outputformats.sitemap]
+    basename = 'sitemap'
+    mediatype = 'application/xml'
+    name = 'sitemap'
+    nougly = true
+    rel = 'sitemap'
+
+  [outputformats.webappmanifest]
+    basename = 'manifest'
+    isplaintext = true
+    mediatype = 'application/manifest+json'
+    name = 'webappmanifest'
+    notalternative = true
+    rel = 'manifest'
+
+[outputs]
+  home = ['html', 'rss']
+  page = ['html']
+  rss = ['rss']
+  section = ['html', 'rss']
+  taxonomy = ['html', 'rss']
+  term = ['html', 'rss']
+
+[params]
+  dateformat = '2006-01-02'
+  description = 'Bear Cub Demo'
+  favicon = 'images/favicon.png'
+  generatesocialcard = true
+  images = ['images/share.webp']
+  madewith = 'Made with [Bear Cub](https://github.com/clente/hugo-bearcub)'
+  themestyle = 'original'
+  title = 'Bear Cub'
+
+  [params.author]
+    email = 'me@example.com'
+    name = 'John Doe'
+
+  [params.social]
+    facebook_admin = '0000000000'
+    twitter = 'example'
+
+[permalinks]
+
+[privacy]
+  [privacy.disqus]
+
+  [privacy.googleanalytics]
+
+  [privacy.instagram]
+
+  [privacy.twitter]
+
+  [privacy.vimeo]
+
+  [privacy.youtube]
+
+[related]
+  threshold = 80
+
+[[related.indices]]
+    name = 'keywords'
+    type = 'basic'
+    weight = 100
+
+[[related.indices]]
+    name = 'date'
+    type = 'basic'
+    weight = 10
+
+[[related.indices]]
+    name = 'tags'
+    type = 'basic'
+    weight = 80
+
+[security]
+  [security.exec]
+    allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^npx$', '^postcss$']
+    osenv = ['(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+|(XDG_CONFIG_)?HOME|USERPROFILE|SSH_AUTH_SOCK|DISPLAY|LANG)$']
+
+  [security.funcs]
+    getenv = ['^HUGO_', '^CI$']
+
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']
+
+[server]
+[[server.redirects]]
+    from = '**'
+    status = 404
+    to = '/404.html'
+
+[services]
+  [services.disqus]
+
+  [services.googleanalytics]
+
+  [services.instagram]
+
+  [services.rss]
+    limit = -1
+
+  [services.twitter]
+
+[sitemap]
+  filename = 'sitemap.xml'
+  priority = -1
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
