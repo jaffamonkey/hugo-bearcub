@@ -1,6 +1,7 @@
 ---
-title: Accessbility Audit
-description: Get an audit at any point in your web and mobile app projects
+title: "Accessibility audit"
+menu: "main"
+weight: 1
 ---
 
 > Accessibility means more than putting things online.
